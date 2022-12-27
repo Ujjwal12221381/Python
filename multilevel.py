@@ -1,18 +1,15 @@
-# multi-level
-
+#multiple
 class A:
     def Ainfo(self):
         print("A")
 
-class B(A):
+class B:
     def Binfo(self):
         print("B")
-        A().info()
-
-class C(B):
+class C(A,B):
     def Cinfo(self):
+        A().Ainfo()
         print("C")
-        B().info()
-        
+        B().Binfo()
 Cobj=C()
 Cobj.Cinfo()
